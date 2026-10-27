@@ -1,0 +1,26 @@
+{
+  "name": "Business",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "whose": { "type": "string", "enum": ["own", "client"], "default": "own" },
+    "sent_as": { "type": "string", "default": "" },
+    "website": { "type": "string", "default": "" },
+    "what_they_do": { "type": "string", "default": "" },
+    "what_they_dont": { "type": "string", "default": "" },
+    "ideal_client": { "type": "string", "default": "" },
+    "not_ideal_client": { "type": "string", "default": "" },
+    "country": { "type": "string", "default": "" },
+    "town": { "type": "string", "default": "" },
+    "region": { "type": "string", "default": "" },
+    "spelling": { "type": "string", "enum": ["UK", "US"], "default": "US" },
+    "result_story": { "type": "string", "default": "" }
+  },
+  "required": ["name"],
+  "rls": {
+    "create": { "created_by_id": "{{user.id}}" },
+    "read": { "created_by_id": "{{user.id}}" },
+    "update": { "created_by_id": "{{user.id}}" },
+    "delete": { "created_by_id": "{{user.id}}" }
+  }
+}

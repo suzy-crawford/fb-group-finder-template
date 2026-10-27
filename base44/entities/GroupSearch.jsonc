@@ -1,0 +1,35 @@
+{
+  "name": "GroupSearch",
+  "type": "object",
+  "properties": {
+    "business_id": { "type": "string", "default": "" },
+    "business_name": { "type": "string", "default": "" },
+    "stage": { "type": "string", "enum": ["who", "about", "keywords", "searching", "results"], "default": "who" },
+    "service": { "type": "string", "default": "" },
+    "ideal_client": { "type": "string", "default": "" },
+    "country": { "type": "string", "default": "" },
+    "town": { "type": "string", "default": "" },
+    "region": { "type": "string", "default": "" },
+    "client_reach": { "type": "string", "enum": ["local", "national", "worldwide"], "default": "national" },
+    "avoid": { "type": "string", "default": "" },
+    "result_story": { "type": "string", "default": "" },
+    "keywords": { "type": "array", "items": { "type": "object" }, "default": [] },
+    "keyword_notes": { "type": "string", "default": "" },
+    "round": { "type": "number", "default": 1 },
+    "runs": { "type": "array", "items": { "type": "object" }, "default": [] },
+    "candidates": { "type": "array", "items": { "type": "object" }, "default": [] },
+    "groups": { "type": "array", "items": { "type": "object" }, "default": [] },
+    "shortfall": { "type": "object" },
+    "posts": { "type": "object" },
+    "dropped": { "type": "object" },
+    "phase": { "type": "string", "default": "" },
+    "error": { "type": "string", "default": "" },
+    "checked_date": { "type": "string", "default": "" }
+  },
+  "rls": {
+    "create": { "created_by_id": "{{user.id}}" },
+    "read": { "created_by_id": "{{user.id}}" },
+    "update": { "created_by_id": "{{user.id}}" },
+    "delete": { "created_by_id": "{{user.id}}" }
+  }
+}

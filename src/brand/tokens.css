@@ -1,0 +1,132 @@
+/* Copied from the SheFreelances AI brand kit (v3). Only change: --primary, --primary-pressed and --on-primary are
+   renamed --sf-primary, --sf-primary-pressed and --sf-on-primary, because the UI library already uses --primary. */
+/* SheFreelances AI design tokens. Light is the default; dark applies with [data-theme="dark"] on <html>,
+   or automatically from the OS setting unless [data-theme="light"] is set. */
+/* Gloock ships with the kit (fonts/), so it works offline and needs no Google Fonts request. */
+@font-face { font-family: "Gloock"; src: url("fonts/gloock-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+:root {
+  --app-bg: #fdfbf8; /* App only: the page. Off-white by day, midnight by night. */
+  --panel: #ffffff; /* App only: the few surfaces (AI tool cards, search bar, an AI tool's document). */
+  --surface: #fdfbf8; /* Page background: soft white with a hint of warmth. Dark theme is deep navy, never purple-black. */
+  --surface-raised: #fefdfb; /* Inputs, menus, the lesson player frame. */
+  --surface-sunk: #f8f6f3; /* Alternating page sections and skeleton loaders. */
+  --line: #ebe6de; /* Hairline dividers between list rows and sections. Decorative only. */
+  --line-strong: #878c99; /* Input and checkbox borders, on surface and surface-raised (3:1 in both themes). */
+  --ink: #1a2236; /* Primary text and text links, on surface, surface-raised, surface-sunk and lavender-soft. */
+  --ink-muted: #5d6475; /* Secondary text, metadata, eyebrows, module numbers, on the same grounds as ink. */
+  --navy: #1a2236; /* Brand anchor: midnight navy. Header bands, footer, the primary button. Soft white text on it. */
+  --lavender: #d6cdf0; /* Brand soft lavender. The wordmark's 'She' on navy, 'New' tags, cover blocks. Navy text on it. */
+  --lavender-soft: #f3f0fb; /* Soft panels: community tips, callouts, testimonial grounds. Ink text on it. */
+  --brand-text: #5e4fa2; /* Lavender as text on light grounds: the wordmark's 'She' on soft white. Use nowhere else. */
+  --butter: #f7e3a1; /* The highlighter behind key words, the 'AI' tag, 'In progress' tags. Never a large background. */
+  --butter-soft: #fdf6dd; /* Tinted art areas and tool headers for butter tools. Ink text on it. */
+  --on-butter: #1a2236; /* Text set on butter or lavender, in both themes. */
+  --sf-primary: var(--navy); /* Primary action fill and progress fill. Navy in light, lavender in dark. */
+  --sf-primary-pressed: #0f1524; /* Pressed (pointer-down) state of primary. */
+  --sf-on-primary: #fdfbf8; /* Text on primary. */
+  --focus: #1a2236; /* Focus ring: 2px solid, 2px offset. 13:1 or better on every surface. */
+  --success: #2d6a4f; /* Completed states as text, always beside the word 'Completed' or 'Saved'. */
+  --danger: #a61b1b; /* Form errors and destructive actions, always with a written message. */
+  --elev-1: 0 1px 2px rgba(26,34,54,0.05), 0 2px 8px rgba(26,34,54,0.04);
+  --elev-2: 0 1px 2px rgba(26,34,54,0.06), 0 12px 28px -12px rgba(26,34,54,0.2);
+  --elev-3: 0 2px 4px rgba(26,34,54,0.08), 0 24px 44px -18px rgba(26,34,54,0.32);
+  --shadow-menu: 0 10px 30px rgba(30,25,21,0.16);
+  --space-1: 4px; /* Icon-to-text gaps, tag padding. */
+  --space-2: 8px; /* Tight stacks. */
+  --space-3: 12px; /* Label-to-field, list row inner gaps. */
+  --space-4: 16px; /* Default gap; mobile page gutter. */
+  --space-6: 24px; /* List row vertical padding, panel padding. */
+  --space-8: 32px; /* Desktop panel padding, group spacing. */
+  --space-12: 48px; /* Between sections on mobile. */
+  --space-16: 64px; /* Between sections on desktop. */
+  --space-24: 96px; /* Hero top and bottom padding. */
+  --size-control: 36px; /* Height of buttons, inputs and selects in the app on desktop. */
+  --size-control-sm: 32px; /* Small buttons and icon buttons in toolbars and the top bar. */
+  --size-row: 48px; /* Table row height. */
+  --size-sidebar: 248px; /* App sidebar width. */
+  --size-topbar: 56px; /* App top bar height. */
+  --radius-xs: 2px; /* The 'AI' tag, badges, progress bars, skeleton blocks. */
+  --radius-sm: 4px; /* Buttons and inputs. */
+  --radius-md: 8px; /* Panels, menus, video and screenshot frames. The largest radius in the system. */
+  --font-display: "Gloock", Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+[data-theme="dark"] {
+  --app-bg: #0d1119;
+  --panel: #141925;
+  --surface: #11161f;
+  --surface-raised: #181e2a;
+  --surface-sunk: #0c1018;
+  --line: #262d3b;
+  --line-strong: #6c7385;
+  --ink: #f4f2ee;
+  --ink-muted: #a9aebb;
+  --navy: #2a3550;
+  --lavender: #d6cdf0;
+  --lavender-soft: #22263a;
+  --brand-text: #d6cdf0;
+  --butter: #f2d98a;
+  --butter-soft: #2a2717;
+  --on-butter: #1a2236;
+  --sf-primary: #d6cdf0;
+  --sf-primary-pressed: #c5b9ec;
+  --sf-on-primary: #1a2236;
+  --focus: #f4f2ee;
+  --success: #7bc4a0;
+  --danger: #ff8a7a;
+  --elev-1: 0 1px 2px rgba(0,0,0,0.4);
+  --elev-2: 0 1px 2px rgba(0,0,0,0.4), 0 12px 28px -12px rgba(0,0,0,0.6);
+  --elev-3: 0 2px 4px rgba(0,0,0,0.45), 0 24px 44px -18px rgba(0,0,0,0.7);
+  --shadow-menu: 0 10px 30px rgba(0,0,0,0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --app-bg: #0d1119;
+    --panel: #141925;
+    --surface: #11161f;
+    --surface-raised: #181e2a;
+    --surface-sunk: #0c1018;
+    --line: #262d3b;
+    --line-strong: #6c7385;
+    --ink: #f4f2ee;
+    --ink-muted: #a9aebb;
+    --navy: #2a3550;
+    --lavender: #d6cdf0;
+    --lavender-soft: #22263a;
+    --brand-text: #d6cdf0;
+    --butter: #f2d98a;
+    --butter-soft: #2a2717;
+    --on-butter: #1a2236;
+    --sf-primary: #d6cdf0;
+    --sf-primary-pressed: #c5b9ec;
+    --sf-on-primary: #1a2236;
+    --focus: #f4f2ee;
+    --success: #7bc4a0;
+    --danger: #ff8a7a;
+    --elev-1: 0 1px 2px rgba(0,0,0,0.4);
+    --elev-2: 0 1px 2px rgba(0,0,0,0.4), 0 12px 28px -12px rgba(0,0,0,0.6);
+    --elev-3: 0 2px 4px rgba(0,0,0,0.45), 0 24px 44px -18px rgba(0,0,0,0.7);
+    --shadow-menu: 0 10px 30px rgba(0,0,0,0.55);
+  }
+}
+
+/* Type styles */
+.display-xl { font-family: var(--font-display); font-size: 4rem; line-height: 1.04; font-weight: 400; letter-spacing: -0.025em; } /* Landing-page hero headline. One per page. */
+.display { font-family: var(--font-display); font-size: 2.75rem; line-height: 1.08; font-weight: 400; letter-spacing: -0.02em; } /* Section openers, webinar slides, ad headlines. */
+.h1 { font-family: var(--font-display); font-size: 2rem; line-height: 1.15; font-weight: 400; letter-spacing: -0.012em; } /* Page titles in the course and community. */
+.h2 { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.25; font-weight: 400; letter-spacing: -0.006em; } /* Lesson titles, section heads, email headers. */
+.h3 { font-family: var(--font-sans); font-size: 1.1875rem; line-height: 1.35; font-weight: 600; letter-spacing: -0.01em; } /* Sub-heads inside lessons and pages. */
+.body-lg { font-family: var(--font-sans); font-size: 1.125rem; line-height: 1.6; font-weight: 400; letter-spacing: -0.005em; } /* Sales-page and email body copy. */
+.body { font-family: var(--font-sans); font-size: 1rem; line-height: 1.5; font-weight: 400; letter-spacing: 0em; } /* Default UI and lesson copy. */
+.label { font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.3; font-weight: 600; letter-spacing: 0em; } /* Buttons, form labels, tabs. */
+.small { font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.45; font-weight: 400; letter-spacing: 0.01em; } /* Metadata, hints, captions. */
+.eyebrow { font-family: var(--font-sans); font-size: 0.75rem; line-height: 1.35; font-weight: 600; letter-spacing: 0.09em; } /* Uppercase kicker above headlines, in ink or ink-muted. */
+.app-title { font-family: var(--font-display); font-size: 1.75rem; line-height: 1.15; font-weight: 400; letter-spacing: -0.012em; } /* Page title inside the app. One per screen. */
+.app-section { font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.35; font-weight: 600; letter-spacing: -0.005em; } /* Panel and section titles, tool names on tiles. */
+.app-body { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.45; font-weight: 400; letter-spacing: 0em; } /* Default text in the app, nav items, buttons. */
+.app-meta { font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.45; font-weight: 400; letter-spacing: 0.005em; } /* Table cells, descriptions on tiles, metadata. */
+.app-micro { font-family: var(--font-sans); font-size: 0.75rem; line-height: 1.35; font-weight: 600; letter-spacing: 0.01em; } /* Column headers, counters, status tags. */
+.eyebrow { text-transform: uppercase; }

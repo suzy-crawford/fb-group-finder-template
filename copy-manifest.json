@@ -1,0 +1,266 @@
+{
+  "version": "1.0.0",
+  "parts": 4,
+  "files": {
+    "tailwind.config.js": {
+      "part": 1,
+      "hash": "ae5a3deda544ab36"
+    },
+    "base44/entities/AppSettings.jsonc": {
+      "part": 1,
+      "hash": "c8c2b57dffdc3b6e"
+    },
+    "base44/entities/Business.jsonc": {
+      "part": 1,
+      "hash": "8e804fa15decdcd8"
+    },
+    "base44/entities/GroupSearch.jsonc": {
+      "part": 1,
+      "hash": "69e64c66cad297ae"
+    },
+    "base44/entities/User.jsonc": {
+      "part": 1,
+      "hash": "eca48bb30862a459"
+    },
+    "src/components/ui/use-toast.jsx": {
+      "part": 1,
+      "hash": "5ec073232579fa1a"
+    },
+    "src/components/brand/icons.jsx": {
+      "part": 1,
+      "hash": "d004f748ee820886"
+    },
+    "src/lib/utils.js": {
+      "part": 1,
+      "hash": "6358196bcee81422"
+    },
+    "src/components/ui/toast.jsx": {
+      "part": 1,
+      "hash": "ca247c5fb4816c7c"
+    },
+    "src/components/ui/toaster.jsx": {
+      "part": 1,
+      "hash": "9f767080fd2c2f47"
+    },
+    "src/lib/query-client.js": {
+      "part": 1,
+      "hash": "1ca25a151e78de0e"
+    },
+    "src/lib/app-params.js": {
+      "part": 1,
+      "hash": "bb26f6211d61013f"
+    },
+    "src/api/base44Client.js": {
+      "part": 1,
+      "hash": "18bcdb33c42ffb15"
+    },
+    "src/lib/PageNotFound.jsx": {
+      "part": 1,
+      "hash": "437cbdd79b8b5d17"
+    },
+    "src/lib/AuthContext.jsx": {
+      "part": 1,
+      "hash": "9f1fb0241bbc2256"
+    },
+    "src/components/UserNotRegisteredError.jsx": {
+      "part": 1,
+      "hash": "639dcbc97ffc776a"
+    },
+    "src/components/ScrollToTop.jsx": {
+      "part": 1,
+      "hash": "1992dd4ea742a40d"
+    },
+    "src/components/shared/Skeleton.jsx": {
+      "part": 1,
+      "hash": "87380cd35236863d"
+    },
+    "src/components/ProtectedRoute.jsx": {
+      "part": 1,
+      "hash": "1482922355b6751f"
+    },
+    "src/lib/assets.js": {
+      "part": 1,
+      "hash": "bcc283d01ac33777"
+    },
+    "src/lib/constants.js": {
+      "part": 1,
+      "hash": "d0c72c8db62237a4"
+    },
+    "src/components/AppLayout.jsx": {
+      "part": 1,
+      "hash": "488e776680d2539d"
+    },
+    "src/App.jsx": {
+      "part": 1,
+      "hash": "924f3cfd24168677"
+    },
+    "src/lib/version.js": {
+      "part": 1,
+      "hash": "07acb358cb9c2f3e"
+    },
+    "src/lib/brandStyles.js": {
+      "part": 1,
+      "hash": "d4337e77a5047389"
+    },
+    "src/index.css": {
+      "part": 1,
+      "hash": "6e32adf03f245c93"
+    },
+    "src/lib/theme.js": {
+      "part": 1,
+      "hash": "fa58bc61dbb4acfc"
+    },
+    "src/main.jsx": {
+      "part": 1,
+      "hash": "de045866ac01061e"
+    },
+    "src/components/shared/ToolHero.jsx": {
+      "part": 1,
+      "hash": "7568afffc57e3f95"
+    },
+    "src/components/shared/CopyButton.jsx": {
+      "part": 1,
+      "hash": "664abc780b50668c"
+    },
+    "src/components/shared/UpdateBanner.jsx": {
+      "part": 1,
+      "hash": "ef5dac899f12104f"
+    },
+    "src/pages/Home.jsx": {
+      "part": 1,
+      "hash": "bb088046648c6074"
+    },
+    "base44/functions/apify/entry.ts": {
+      "part": 2,
+      "hash": "25a28c8f2942e9d5"
+    },
+    "base44/functions/generateWithAI/entry.ts": {
+      "part": 2,
+      "hash": "a80385a3e00844b6"
+    },
+    "src/lib/authReturnTo.js": {
+      "part": 2,
+      "hash": "4e1307074ee9de1b"
+    },
+    "src/lib/callAI.js": {
+      "part": 2,
+      "hash": "7b19c28657f3f4ea"
+    },
+    "src/lib/copyCheck.js": {
+      "part": 2,
+      "hash": "015642f7fc411210"
+    },
+    "src/lib/fbgLogic.js": {
+      "part": 2,
+      "hash": "136c56e6f7a7dda5"
+    },
+    "src/lib/fbgPrompts.js": {
+      "part": 2,
+      "hash": "884ee30f9ab2b9a4"
+    },
+    "src/lib/fbgRunner.js": {
+      "part": 2,
+      "hash": "8372f802848a43bf"
+    },
+    "src/components/AuthLayout.jsx": {
+      "part": 2,
+      "hash": "476fec3e81024f43"
+    },
+    "src/components/GoogleIcon.jsx": {
+      "part": 2,
+      "hash": "084beefa50de1eae"
+    },
+    "src/components/shared/PageHeader.jsx": {
+      "part": 2,
+      "hash": "43d69ec9bef04979"
+    },
+    "src/components/shared/SelectableCard.jsx": {
+      "part": 2,
+      "hash": "caf0266c525b3006"
+    },
+    "src/components/shared/Tabs.jsx": {
+      "part": 2,
+      "hash": "cd6462c62e568d8a"
+    },
+    "src/components/ui/button.jsx": {
+      "part": 2,
+      "hash": "83d3237df356b974"
+    },
+    "src/components/ui/input-otp.jsx": {
+      "part": 2,
+      "hash": "075ca7379be612b8"
+    },
+    "src/components/ui/input.jsx": {
+      "part": 2,
+      "hash": "c49ab45b9995d831"
+    },
+    "src/components/ui/label.jsx": {
+      "part": 2,
+      "hash": "42d9500ad59b504b"
+    },
+    "src/pages/ForgotPassword.jsx": {
+      "part": 2,
+      "hash": "5da08a55818e4f30"
+    },
+    "src/pages/Login.jsx": {
+      "part": 2,
+      "hash": "f2598aa547f74cba"
+    },
+    "src/pages/OAuthConsent.jsx": {
+      "part": 2,
+      "hash": "42b3f17c14f388e8"
+    },
+    "src/pages/Register.jsx": {
+      "part": 2,
+      "hash": "10486da07bec52b0"
+    },
+    "src/pages/ResetPassword.jsx": {
+      "part": 2,
+      "hash": "4fe42928604519a2"
+    },
+    "src/pages/Search.jsx": {
+      "part": 2,
+      "hash": "4aeb1f26eb3eb625"
+    },
+    "src/pages/Settings.jsx": {
+      "part": 3,
+      "hash": "6cf8cede04e0ed65"
+    },
+    "src/pages/SetupCheck.jsx": {
+      "part": 3,
+      "hash": "b096e8db46d355ef"
+    },
+    "src/brand/app.css": {
+      "part": 3,
+      "hash": "be0f8580e8757e36"
+    },
+    "src/brand/brand2-1.css": {
+      "part": 3,
+      "hash": "4f32281a800f5579"
+    },
+    "src/brand/brand2-2.css": {
+      "part": 3,
+      "hash": "f2c9c7f2b9977962"
+    },
+    "src/brand/brand2-3.css": {
+      "part": 4,
+      "hash": "d9082a953cb431d5"
+    },
+    "src/brand/brand2-4.css": {
+      "part": 4,
+      "hash": "f92f1c33b4ab61dc"
+    },
+    "src/brand/kit2/components.css": {
+      "part": 4,
+      "hash": "65543ce6893c5bf6"
+    },
+    "src/brand/kit2/tokens.css": {
+      "part": 4,
+      "hash": "8dd3618e9e087269"
+    },
+    "src/brand/tokens.css": {
+      "part": 4,
+      "hash": "c2dbe56ae1f64445"
+    }
+  }
+}

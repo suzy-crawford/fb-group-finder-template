@@ -1,0 +1,303 @@
+/* The brand stylesheets load from src/lib/brandStyles.js (main.jsx), before this file. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 4px;
+    --font-heading: var(--font-display);
+    --font-body: var(--font-sans);
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* App colors, mapped to the SheFreelances AI brand tokens (src/brand/tokens.css). */
+    --color-bg: var(--a-bg);
+    --color-surface: var(--a-sunk);
+    --color-raised: var(--a-surface);
+    --color-border: var(--a-line);
+    --color-border-strong: var(--a-line-strong);
+    --color-text: var(--a-ink);
+    --color-muted: var(--a-muted);
+    --color-primary: var(--a-primary);
+    --color-primary-pressed: var(--a-primary);
+    --color-on-primary: var(--a-on-primary);
+    --color-success: var(--success);
+    --color-warning: var(--a-muted);
+    --color-danger: var(--danger);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-app-bg text-app-text font-body antialiased;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+}
+
+/* Butter highlighter behind one key phrase per headline. */
+.sf-hl {
+  background: var(--butter);
+  color: var(--on-butter);
+  padding: 0 0.12em;
+  margin: 0 -0.04em;
+  border-radius: var(--radius-xs);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Small label above a value. In the app this is sentence case, not an uppercase eyebrow
+   (APP-UI.md: eyebrows only in the sidebar). */
+.sf-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-muted);
+}
+
+/* Skeleton loaders, shaped like the content that is coming. */
+.sf-skel {
+  border-radius: var(--radius-xs);
+  background: var(--surface-sunk);
+  animation: sf-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes sf-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* Press feedback: respond on pointer-down, not hover. */
+.sf-press {
+  transition: transform 100ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sf-press:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sf-press,
+  .sf-press:active:not(:disabled) {
+    transition: none;
+    transform: none;
+  }
+
+  .sf-skel {
+    animation: none;
+  }
+}
+
+/* Offer doc: click-to-edit text */
+.editable-text:hover {
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.editable-input {
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+.editable-input:focus {
+  box-shadow: inset 0 0 0 1px currentColor;
+  outline: none;
+}
+
+/* Ads campaign plan: kept off screen, printed by "Save as PDF" */
+.print-only { position: absolute; left: -10000px; top: 0; width: 720px; }
+@media print { .print-only { position: static; left: 0; } }
+
+/* Print: only the offer document, one page, colors kept */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+  }
+
+  .print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+@page {
+  size: letter portrait;
+  margin: 0.4in;
+}
+
+/* ---------- Companion styles for app pieces the v3 kit doesn't cover ----------
+   Built only from the v3 kit's variables so both themes keep working. */
+.hint { font-size: 12.5px; color: var(--a-muted); }
+.panel-title { margin: 0; font-size: 15px; font-weight: 600; font-family: var(--font-sans); }
+.empty { padding: 36px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.empty-title { font-weight: 600; font-size: 15px; }
+.empty-text { color: var(--a-muted); max-width: 440px; margin: 0 0 8px; }
+.btn-sm { height: 34px; padding: 0 12px; font-size: 13px; }
+.btn-secondary { background: var(--a-surface); color: var(--a-ink); border-color: var(--a-line-strong); }
+.btn-ghost { background: transparent; color: var(--a-ink); }
+.btn[disabled] { opacity: 0.45; cursor: not-allowed; transform: none; }
+.status { white-space: nowrap; display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+.status-new { background: var(--lavender); color: #1a2236; }
+.status-active { background: var(--butter); color: #1a2236; }
+.status-done { color: var(--success); box-shadow: inset 0 0 0 1px currentColor; }
+.status-idle { color: var(--a-muted); box-shadow: inset 0 0 0 1px var(--a-line-strong); }
+.seg { display: inline-flex; flex-wrap: wrap; gap: 8px; }
+.seg button { height: 34px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--a-line-strong); background: transparent; color: var(--a-ink); font: 500 13.5px/1 var(--font-sans); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--a-primary); color: var(--a-on-primary); border-color: var(--a-primary); }
+.chips { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+.chip { background: none; border: 0; padding: 0 0 1px; color: var(--a-ink); font: 500 13px/1.4 var(--font-sans); border-bottom: 1px solid var(--a-line-strong); cursor: pointer; }
+.chip[aria-pressed="true"] { border-bottom: 2px solid var(--a-ink); font-weight: 600; }
+.initial-sm { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--a-line-strong); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.125rem; flex-shrink: 0; }
+.biz-avatar { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--a-line-strong); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.125rem; flex-shrink: 0; }
+.tool-label { font-size: 12px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--a-muted); }
+.mobile-bar { display: none; }
+@media (max-width: 860px) {
+  .mobile-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: var(--a-side); color: var(--a-side-ink); }
+}
+.mobile-bar button { background: transparent; border: 0; color: inherit; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; }
+.mobile-bar svg { width: 22px; height: 22px; }
+
+/* Button component (Button in components/ui) follows the kit's buttons. */
+.sf-press { transition: transform 100ms ease-out; }
+.sf-press:active:not(:disabled) { transform: scale(0.97); }
+.sf-skel { border-radius: 4px; background: var(--a-sunk); animation: sf-pulse 1.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .sf-press, .sf-press:active:not(:disabled) { transition: none; transform: none; } .sf-skel { animation: none; } }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.page-sub { margin: 10px 0 0; font-size: 15px; color: var(--a-muted); max-width: 620px; }
+
+/* Sidebar hover (Suzy, Oct 11): items light up on hover, matching the active state. */
+.nav-item {
+  transition: background-color 150ms ease-out, color 150ms ease-out;
+}
+a.nav-item:hover {
+  background: var(--a-side-active);
+  color: #ffffff;
+}
+a.nav-item:hover svg {
+  color: var(--lavender);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-item {
+    transition: none;
+  }
+}
+
+/* Ads: slide the questions panel away and back */
+.guided { transition: grid-template-columns 250ms ease-out, gap 250ms ease-out; }
+.guided > .guided-form { min-width: 0; transition: opacity 200ms ease-out; }
+.guided.inputs-hidden { grid-template-columns: 0px minmax(0, 1fr); gap: 0; }
+.guided.inputs-hidden > .guided-form { opacity: 0; visibility: hidden; overflow: hidden; }
+@media (max-width: 1100px) { .guided.inputs-hidden { grid-template-columns: 1fr; } .guided.inputs-hidden > .guided-form { display: none; } }
