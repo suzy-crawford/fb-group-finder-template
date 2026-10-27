@@ -1,5 +1,8 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-10-27",
-  "notes": ["First version: finds 10 niche and 10 local Facebook groups averaging 10+ posts a day, with ready-to-paste posts"]
+  "notes": [
+    "First version: finds 10 niche and 10 local Facebook groups averaging 10+ posts a day, with ready-to-paste posts",
+    "Smaller install"
+  ]
 }

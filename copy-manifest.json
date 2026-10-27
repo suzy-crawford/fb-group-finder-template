@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "parts": 4,
   "files": {
     "tailwind.config.js": {
@@ -96,7 +96,7 @@
     },
     "src/lib/version.js": {
       "part": 1,
-      "hash": "07acb358cb9c2f3e"
+      "hash": "ccf8480bd64d5810"
     },
     "src/lib/brandStyles.js": {
       "part": 1,
@@ -206,10 +206,6 @@
       "part": 2,
       "hash": "f2598aa547f74cba"
     },
-    "src/pages/OAuthConsent.jsx": {
-      "part": 2,
-      "hash": "42b3f17c14f388e8"
-    },
     "src/pages/Register.jsx": {
       "part": 2,
       "hash": "10486da07bec52b0"
@@ -223,11 +219,11 @@
       "hash": "4aeb1f26eb3eb625"
     },
     "src/pages/Settings.jsx": {
-      "part": 3,
+      "part": 2,
       "hash": "6cf8cede04e0ed65"
     },
     "src/pages/SetupCheck.jsx": {
-      "part": 3,
+      "part": 2,
       "hash": "b096e8db46d355ef"
     },
     "src/brand/app.css": {
